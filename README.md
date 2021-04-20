@@ -62,4 +62,3 @@ Follow these steps to get the project up and running for deployment
 - `cp .env.example .env`
 - Setup appropriate env variables
 - `npm run start` to see it in action.
-- Uses `pm2` to run the application in production.
