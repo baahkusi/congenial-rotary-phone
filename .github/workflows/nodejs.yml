@@ -9,7 +9,8 @@ jobs:
       matrix:
         node-version: [12.x]
         mongodb-version: [4.0]
-
+    env:
+      CONN_URL_TEST: mongodb://127.0.0.1/getir-case-study?retryWrites=true
     steps:
     - name: Git checkout
       uses: actions/checkout@v2
