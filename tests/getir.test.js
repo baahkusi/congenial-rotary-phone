@@ -19,6 +19,5 @@ describe('Test POST Endpoint', () => {
     expect(resp.body.code, 'Response Code').to.equal(0);
     // eslint-disable-next-line no-unused-expressions
     expect(resp.body.records, 'Records').to.not.be.empty;
-    console.log(resp.body);
   });
 });

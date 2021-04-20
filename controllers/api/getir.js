@@ -45,6 +45,7 @@ module.exports = async (req, res) => {
       return res.status(400).json(validateInput);
     }
 
+    // we only need a single mongodb connection
     if (!client.isConnected()) await client.connect();
     const records = await client.db('getir-case-study')
       .collection('records')
@@ -75,6 +76,7 @@ module.exports = async (req, res) => {
         },
       ])
       .toArray();
+
     return res.status(200).json({
       code: 0,
       msg: 'Sucess',
